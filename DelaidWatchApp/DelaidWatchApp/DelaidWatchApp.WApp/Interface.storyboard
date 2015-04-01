@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="6221" systemVersion="14A389" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6213"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="3734"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" spacing="0.0">
+                    <items>
+                        <group width="1" alignment="left" id="49" height="0.885" layout="vertical">
+                            <items>
+                                <group width="100" alignment="center" id="81" height="100" backgroundImage="countdown-outline.png">
+                                    <items>
+                                        <group width="75" alignment="center" id="83" verticalAlignment="center" height="75" radius="36.5">
+                                            <color key="backgroundColor" colorSpace="calibratedRGB" red="0.984313725490196" green="0.45882352941176469" blue="0.0392156862745098" alpha="1"/>
+                                            <items>
+                                                <group alignment="center" id="85" verticalAlignment="center" layout="vertical">
+                                                    <items>
+                                                        <label alignment="center" text="NEXT TRAIN" id="86" verticalAlignment="center">
+                                                            <fontDescription key="font" type="system" pointSize="8"/>
+                                                        </label>
+                                                        <group alignment="center" id="87" spacing="0" verticalAlignment="center">
+                                                            <items>
+                                                                <label alignment="left" text="0:56" id="89" verticalAlignment="bottom" hidden="YES">
+                                                                    <fontDescription key="font" type="system" pointSize="20"/>
+                                                                </label>
+                                                                <timer alignment="left" id="100" hidden="YES">
+                                                                    <calendarUnit key="units" second="YES" minute="YES"/>
+                                                                    <fontDescription key="font" type="system" pointSize="20"/>
+                                                                </timer>
+                                                                <timer alignment="left" id="101" previewedSeconds="8000" verticalAlignment="bottom">
+                                                                    <calendarUnit key="units" minute="YES"/>
+                                                                    <fontDescription key="font" type="system" pointSize="20"/>
+                                                                </timer>
+                                                                <label alignment="left" text="MINS" id="90" verticalAlignment="center">
+                                                                    <fontDescription key="font" type="system" pointSize="10"/>
+                                                                </label>
+                                                            </items>
+                                                        </group>
+                                                    </items>
+                                                </group>
+                                            </items>
+                                        </group>
+                                    </items>
+                                </group>
+                                <label alignment="center" text="DELAYS" id="80" height="15">
+                                    <fontDescription key="font" type="system" pointSize="10"/>
+                                </label>
+                            </items>
+                            <edgeInsets key="margins" left="0.0" right="0.0" top="5" bottom="0.0"/>
+                        </group>
+                        <group width="1" alignment="left" id="91" height="0.125" heightAdjustment="0" verticalAlignment="bottom">
+                            <items>
+                                <button width="0.3333333" alignment="left" id="93" height="1" enabled="NO">
+                                    <group key="contentGroup" width="1" alignment="left" id="LKc-EY-E6H" contentMode="scaleAspectFit">
+                                        <items/>
+                                    </group>
+                                </button>
+                                <button width="0.3333333" alignment="left" id="96" height="1" enabled="NO">
+                                    <group key="contentGroup" width="1" alignment="left" id="97" contentMode="scaleAspectFit">
+                                        <items/>
+                                    </group>
+                                </button>
+                                <button width="0.3333333" alignment="left" id="98" height="1" enabled="NO">
+                                    <group key="contentGroup" width="1" alignment="left" id="99" contentMode="scaleAspectFit">
+                                        <items/>
+                                    </group>
+                                </button>
+                            </items>
+                        </group>
+                    </items>
+                    <edgeInsets key="margins" left="1" right="1" top="0.0" bottom="5"/>
+                    <connections>
+                        <outlet property="AltRoutesBtn" destination="65" id="name-outlet-65"/>
+                        <outlet property="MsgBtn" destination="66" id="name-outlet-66"/>
+                        <outlet property="FavBtn" destination="67" id="name-outlet-67"/>
+                        <outlet property="Menu" destination="64" id="name-outlet-64"/>
+                        <outlet property="OuterProgress" destination="81" id="name-outlet-81"/>
+                        <outlet property="InnerGroup" destination="83" id="name-outlet-83"/>
+                        <outlet property="InfoHeaderLbl" destination="86" id="name-outlet-86"/>
+                        <outlet property="TimeLbl" destination="89" id="name-outlet-89"/>
+                        <outlet property="DescLbl" destination="90" id="name-outlet-90"/>
+                        <outlet property="AltRoutesBtn" destination="LKc-EY-E6H" id="name-outlet-LKc-EY-E6H"/>
+                        <outlet property="MsgBtn" destination="97" id="name-outlet-97"/>
+                        <outlet property="FavBtn" destination="99" id="name-outlet-99"/>
+                        <outlet property="MinSecTimer" destination="100" id="name-outlet-100"/>
+                        <outlet property="MinutesTimer" destination="101" id="name-outlet-101"/>
+                    </connections>
+                    <menu key="menu" id="64">
+                        <items>
+                            <menuItem title="Menu Item" id="65" icon="accept"/>
+                            <menuItem title="Menu Item" id="66"/>
+                            <menuItem title="Menu Item" id="67"/>
+                        </items>
+                    </menu>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="411" y="320"/>
+        </scene>
+        <!--Glance Interface Controller-->
+        <!--Static Notification Interface Controller-->
+        <!--Notification Controller-->
+        <scene sceneID="68">
+            <objects>
+                <glanceController id="69" customClass="GlanceController">
+                    <items>
+                        <group alignment="left" id="70"/>
+                        <group alignment="left" id="71"/>
+                    </items>
+                </glanceController>
+            </objects>
+            <point key="canvasLocation" x="309" y="640"/>
+        </scene>
+        <scene sceneID="76">
+            <objects>
+                <notificationController id="77" customClass="NotificationController">
+                    <items>
+                        <label alignment="left" text="Alert Label" id="79"/>
+                    </items>
+                    <notificationCategory key="notificationCategory" offsetNotificationContent="NO" id="aiE-tp-X84"/>
+                    <connections>
+                        <outlet property="notificationAlertLabel" destination="79" id="78"/>
+                    </connections>
+                </notificationController>
+            </objects>
+            <point key="canvasLocation" x="227" y="16"/>
+        </scene>
+    </scenes>
+</document>
