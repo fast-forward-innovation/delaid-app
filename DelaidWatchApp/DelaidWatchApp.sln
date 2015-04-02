@@ -3,11 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DelaidWatchApp.App", "DelaidWatchApp.App\DelaidWatchApp.App.csproj", "{35BBD517-1B5B-40E8-82FC-CFE3D3CFBDA6}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "iOS", "iOS", "{901125CC-4B35-4FDA-AFC9-60922FAD8CE1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DelaidWatchApp.WKExtension", "DelaidWatchApp\DelaidWatchApp.WKExtension\DelaidWatchApp.WKExtension.csproj", "{85853673-7F11-4CD5-82F4-5FD80947EB5B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Delaid.iOS.App", "DelaidWatchApp.App\Delaid.iOS.App.csproj", "{35BBD517-1B5B-40E8-82FC-CFE3D3CFBDA6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DelaidWatchApp.WApp", "DelaidWatchApp\DelaidWatchApp.WApp\DelaidWatchApp.WApp.csproj", "{6CCF0532-0A19-4498-948D-B43981C5B0D6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Delaid.iOS.Watch.App", "DelaidWatchApp\DelaidWatchApp.WApp\Delaid.iOS.Watch.App.csproj", "{6CCF0532-0A19-4498-948D-B43981C5B0D6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Delaid.iOS.Watch.Extension", "DelaidWatchApp\DelaidWatchApp.WKExtension\Delaid.iOS.Watch.Extension.csproj", "{85853673-7F11-4CD5-82F4-5FD80947EB5B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Base", "Base", "{FC4D3C7B-420F-42C9-9EF2-CB9E5A2A8919}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Delaid.Base", "DelaidBase\Delaid.Base.csproj", "{0FC189A6-3F10-475D-8CB6-65E6C43ABBCE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +27,22 @@ Global
 		Release|iPhoneSimulator = Release|iPhoneSimulator
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0FC189A6-3F10-475D-8CB6-65E6C43ABBCE}.Ad-Hoc|iPhone.ActiveCfg = Release|Any CPU
+		{0FC189A6-3F10-475D-8CB6-65E6C43ABBCE}.Ad-Hoc|iPhone.Build.0 = Release|Any CPU
+		{0FC189A6-3F10-475D-8CB6-65E6C43ABBCE}.Ad-Hoc|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{0FC189A6-3F10-475D-8CB6-65E6C43ABBCE}.Ad-Hoc|iPhoneSimulator.Build.0 = Release|Any CPU
+		{0FC189A6-3F10-475D-8CB6-65E6C43ABBCE}.AppStore|iPhone.ActiveCfg = Release|Any CPU
+		{0FC189A6-3F10-475D-8CB6-65E6C43ABBCE}.AppStore|iPhone.Build.0 = Release|Any CPU
+		{0FC189A6-3F10-475D-8CB6-65E6C43ABBCE}.AppStore|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{0FC189A6-3F10-475D-8CB6-65E6C43ABBCE}.AppStore|iPhoneSimulator.Build.0 = Release|Any CPU
+		{0FC189A6-3F10-475D-8CB6-65E6C43ABBCE}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{0FC189A6-3F10-475D-8CB6-65E6C43ABBCE}.Debug|iPhone.Build.0 = Debug|Any CPU
+		{0FC189A6-3F10-475D-8CB6-65E6C43ABBCE}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{0FC189A6-3F10-475D-8CB6-65E6C43ABBCE}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{0FC189A6-3F10-475D-8CB6-65E6C43ABBCE}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{0FC189A6-3F10-475D-8CB6-65E6C43ABBCE}.Release|iPhone.Build.0 = Release|Any CPU
+		{0FC189A6-3F10-475D-8CB6-65E6C43ABBCE}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{0FC189A6-3F10-475D-8CB6-65E6C43ABBCE}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
 		{35BBD517-1B5B-40E8-82FC-CFE3D3CFBDA6}.Ad-Hoc|iPhone.ActiveCfg = Ad-Hoc|iPhone
 		{35BBD517-1B5B-40E8-82FC-CFE3D3CFBDA6}.Ad-Hoc|iPhone.Build.0 = Ad-Hoc|iPhone
 		{35BBD517-1B5B-40E8-82FC-CFE3D3CFBDA6}.Ad-Hoc|iPhoneSimulator.ActiveCfg = Ad-Hoc|iPhoneSimulator
@@ -69,6 +91,12 @@ Global
 		{85853673-7F11-4CD5-82F4-5FD80947EB5B}.Release|iPhone.Build.0 = Release|iPhone
 		{85853673-7F11-4CD5-82F4-5FD80947EB5B}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
 		{85853673-7F11-4CD5-82F4-5FD80947EB5B}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{35BBD517-1B5B-40E8-82FC-CFE3D3CFBDA6} = {901125CC-4B35-4FDA-AFC9-60922FAD8CE1}
+		{6CCF0532-0A19-4498-948D-B43981C5B0D6} = {901125CC-4B35-4FDA-AFC9-60922FAD8CE1}
+		{85853673-7F11-4CD5-82F4-5FD80947EB5B} = {901125CC-4B35-4FDA-AFC9-60922FAD8CE1}
+		{0FC189A6-3F10-475D-8CB6-65E6C43ABBCE} = {FC4D3C7B-420F-42C9-9EF2-CB9E5A2A8919}
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

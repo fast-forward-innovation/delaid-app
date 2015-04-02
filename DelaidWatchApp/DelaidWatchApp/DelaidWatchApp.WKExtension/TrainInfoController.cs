@@ -1,52 +1,48 @@
-﻿using System;
-
-using WatchKit;
 using Foundation;
+using System;
+using System.CodeDom.Compiler;
+using UIKit;
+using DelaidWatchApp.WKExtension.Extensions;
+using DelaidBase;
+using Newtonsoft.Json;
 
 namespace DelaidWatchApp.WKExtension
 {
-    public partial class InterfaceController : WKInterfaceController
-    {
-        public InterfaceController(IntPtr handle)
-            : base(handle)
-        {
-        }
+	partial class TrainInfoController : WatchKit.WKInterfaceController
+	{
+		private Train train;
+		
+		public TrainInfoController (IntPtr handle) : base (handle)
+		{
+		}
 
-        public override void Awake(NSObject context)
-        {
-            base.Awake(context);
+		public override void Awake(NSObject context)
+		{
+			base.Awake(context);
 
-            // Configure interface objects here.
-            Console.WriteLine("{0} awake with context", this);
-
-			var device = WKInterfaceDevice.CurrentDevice;
+			// Configure interface objects here.
+			Console.WriteLine("{0} awake with context", this);
 
 			OuterProgress.SetBackgroundImage ("CircleOutline");
 			MsgBtn.SetBackgroundImage ("Msg");
 			AltRoutesBtn.SetBackgroundImage ("AltRoutes");
 			FavBtn.SetBackgroundImage ("Heart");
 
-			//need to talk about using these
-			//AddMenuItem ("AltRoutes", "Alternate Routes", SomeAction);
-			//AddMenuItem ("Msg", "Messages", SomeAction);
-			//AddMenuItem ("Heart", "Favorite", SomeAction);
+			train = JsonConvert.DeserializeObject<Train>(context.ToString());
+		}
 
-			SetArrivalTime(DateTime.Now.Add(TimeSpan.FromMinutes(120)), false);
-        }
+		public override void WillActivate()
+		{
+			// This method is called when the watch view controller is about to be visible to the user.
+			Console.WriteLine("{0} will activate", this);
 
-        public override void WillActivate()
-        {
-            // This method is called when the watch view controller is about to be visible to the user.
-            Console.WriteLine("{0} will activate", this);
-        }
+			SetArrivalTime (train.Arrival, train.Delayed);
+		}
 
-        public override void DidDeactivate()
-        {
-            // This method is called when the watch view controller is no longer visible to the user.
-            Console.WriteLine("{0} did deactivate", this);
-        }
-
-		public void SomeAction() {
+		public override void DidDeactivate()
+		{
+			// This method is called when the watch view controller is no longer visible to the user.
+			Console.WriteLine("{0} did deactivate", this);
 		}
 
 		/// <summary>
@@ -95,6 +91,5 @@ namespace DelaidWatchApp.WKExtension
 				DescLbl.SetText (period);
 			}
 		}
-    }
+	}
 }
-

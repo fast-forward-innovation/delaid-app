@@ -11,18 +11,26 @@ using UIKit;
 
 namespace DelaidWatchApp.WKExtension
 {
-	[Register ("InterfaceController")]
-	partial class InterfaceController
+	[Register ("RowController")]
+	partial class RowController
 	{
 		[Outlet]
 		[GeneratedCode ("iOS Designer", "1.0")]
-		WatchKit.WKInterfaceTable LineTable { get; set; }
+		WatchKit.WKInterfaceGroup LineGroup { get; set; }
+
+		[Outlet]
+		[GeneratedCode ("iOS Designer", "1.0")]
+		WatchKit.WKInterfaceLabel LineLbl { get; set; }
 
 		void ReleaseDesignerOutlets ()
 		{
-			if (LineTable != null) {
-				LineTable.Dispose ();
-				LineTable = null;
+			if (LineGroup != null) {
+				LineGroup.Dispose ();
+				LineGroup = null;
+			}
+			if (LineLbl != null) {
+				LineLbl.Dispose ();
+				LineLbl = null;
 			}
 		}
 	}

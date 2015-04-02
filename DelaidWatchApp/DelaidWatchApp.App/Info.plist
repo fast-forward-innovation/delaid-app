@@ -5,7 +5,7 @@
 	<key>CFBundleDisplayName</key>
 	<string>DELAID</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.delaid</string>
+	<string>com.delaid.ios</string>
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
 	<key>CFBundleVersion</key>

@@ -95,10 +95,14 @@
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="Xamarin.iOS" />
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\packages\Newtonsoft.Json.6.0.8\lib\portable-net40+sl5+wp80+win8+wpa81\Newtonsoft.Json.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />
     <None Include="Entitlements.plist" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="GlanceController.cs" />
@@ -113,18 +117,34 @@
     <Compile Include="NotificationController.designer.cs">
       <DependentUpon>NotificationController.cs</DependentUpon>
     </Compile>
-    <Compile Include="DateExtensions.cs" />
+    <Compile Include="TrainInfoController.cs" />
+    <Compile Include="TrainInfoController.designer.cs">
+      <DependentUpon>TrainInfoController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Extensions\DateExtensions.cs" />
+    <Compile Include="Extensions\LineExtensions.cs" />
+    <Compile Include="RowController.cs" />
+    <Compile Include="RowController.designer.cs">
+      <DependentUpon>RowController.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="PushNotificationPayload.json" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\DelaidWatchApp.WApp\DelaidWatchApp.WApp.csproj">
+    <ProjectReference Include="..\..\DelaidBase\Delaid.Base.csproj">
+      <Project>{0FC189A6-3F10-475D-8CB6-65E6C43ABBCE}</Project>
+      <Name>Delaid.Base</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DelaidWatchApp.WApp\Delaid.iOS.Watch.App.csproj">
       <Project>{6CCF0532-0A19-4498-948D-B43981C5B0D6}</Project>
-      <Name>DelaidWatchApp.WApp</Name>
+      <Name>Delaid.iOS.Watch.App</Name>
       <IsAppExtension>False</IsAppExtension>
       <IsWatchApp>True</IsWatchApp>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.AppExtension.CSharp.targets" />
+  <ItemGroup>
+    <Folder Include="Extensions\" />
+  </ItemGroup>
 </Project>

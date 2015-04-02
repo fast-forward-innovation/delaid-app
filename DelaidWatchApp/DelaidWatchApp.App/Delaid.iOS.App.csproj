@@ -107,9 +107,9 @@
     <Content Include="Entitlements.plist" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\DelaidWatchApp\DelaidWatchApp.WKExtension\DelaidWatchApp.WKExtension.csproj">
+    <ProjectReference Include="..\DelaidWatchApp\DelaidWatchApp.WKExtension\Delaid.iOS.Watch.Extension.csproj">
       <Project>{85853673-7F11-4CD5-82F4-5FD80947EB5B}</Project>
-      <Name>DelaidWatchApp.WKExtension</Name>
+      <Name>Delaid.iOS.Watch.Extension</Name>
       <IsAppExtension>True</IsAppExtension>
       <IsWatchApp>False</IsWatchApp>
     </ProjectReference>

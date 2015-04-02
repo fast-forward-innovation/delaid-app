@@ -1,10 +1,6 @@
-﻿<Properties StartupItem="DelaidWatchApp/DelaidWatchApp.WKExtension/DelaidWatchApp.WKExtension.csproj">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Ad-Hoc|iPhone" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneDeviceTarget" />
-  <MonoDevelop.Ide.Workbench>
-    <Files>
-      <File FileName="DelaidWatchApp/DelaidWatchApp.WKExtension/InterfaceController.cs" Line="24" Column="42" />
-    </Files>
-  </MonoDevelop.Ide.Workbench>
+﻿<Properties StartupItem="DelaidWatchApp/DelaidWatchApp.WKExtension/Delaid.iOS.Watch.Extension.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.IPhone5.8.2" />
+  <MonoDevelop.Ide.Workbench />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

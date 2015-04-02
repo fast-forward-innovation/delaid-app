@@ -1,7 +1,7 @@
 ﻿using System;
 using Foundation;
 
-namespace DelaidWatchApp.WKExtension
+namespace DelaidWatchApp.WKExtension.Extensions
 {
 	public static class DateExtensions
 	{
