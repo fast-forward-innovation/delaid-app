@@ -127,6 +127,7 @@
     <Compile Include="RowController.designer.cs">
       <DependentUpon>RowController.cs</DependentUpon>
     </Compile>
+    <Compile Include="ClockFace.cs" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="PushNotificationPayload.json" />
